@@ -1,0 +1,15 @@
+replicaCount: 2
+
+image:
+  repository: my-docker-repo/healthcare-backend
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+database:
+  host: "postgres.ehealth.svc.cluster.local"
+  port: 5432
+  user: "healthcare_admin"
